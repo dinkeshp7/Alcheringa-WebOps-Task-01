@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alcheringa Task 1</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+    <div class="sidebar">
+        <h2>+ New Item</h2>
+        <ul>
+            <li>
+                <a><img src="/images/library-building-svgrepo-com.svg" alt=""> Dashboard</a>
+                <ul class="dropdown">
+                    <li><a>Commerce</a></li>
+                    <li><a>Analytics</a></li>
+                    <li><a>Crypto</a></li>
+                    <li><a>Help Desk</a></li>
+                    <li><a>Monitoring</a></li>
+                    <li><a>Fitness</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><img src="/images/library-building-svgrepo-com.svg" alt=""> Application</a>
+                <ul class="dropdown">
+                    <li><a>Register</a></li>
+                    <li><a>Complaint</a></li>
+                    <li><a>Management</a></li>
+                    <li><a>Contest Form</a></li>
+                </ul>
+            </li>
+            <li>
+                <a><img src="/images/library-building-svgrepo-com.svg" alt=""> Elements</a>
+                <ul class="dropdown">
+                    <li><a>Heads</a></li>
+                    <li><a>Teams</a></li>
+                    <li><a>Participants</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+    <div class="maincontent">
+        <div class="navbar">
+        <img src="/images/icons8-home.svg" alt="">
+        <h2>Home</h2>
+            <div id="profilename">Username</div>
+        </div>
+        <h1>Welcome</h1>
+        <div class="user">
+            <img id="profilepic" src="/images" alt="Profile pic">
+            <span id="username"></span>
+        </div>
+        <div class="form">
+            <h2>User Details</h2>
+            <p>Information of people who are currently using Central Library.</p>
+            <div class="alert">!!! Sensitive Data Handle with Care and Responsibility.</div>
+        </div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% users.forEach(user=> { %>
+                    <tr>
+                        <td>
+                            <%= user.firstName %>
+                                <%= user.lastName %>
+                        </td>
+                        <td>
+                            <%= user.username %>
+                        </td>
+                        <td>
+                            <%= user.email %>
+                        </td>
+                        <td>
+                            <button class="edit">Edit</button>
+                            <button class="delete">Delete</button>
+                        </td>
+                    </tr>
+                    <% }) %>
+            </tbody>
+        </table>
+    </div>
+    <script src="/js/scripts.js"></script>
+
+</body>
+
+</html>
